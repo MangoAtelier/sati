@@ -108,6 +108,36 @@
             padding: 0;
         }
 
+        .dataslide {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+        }
+
+        .cardslide {
+            display: flex;
+            width: 33%;
+            height: 400px;
+            margin: 0;
+            padding: 0;
+            z-index: 4;
+        }
+
+        .infoslide{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 10px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
         /* Media query para tablets y móviles */
         @media (max-width: 1024px) {
             nav a {
@@ -122,15 +152,36 @@
     <div class="slider-container" id="sliderContainer">
         <div class="slide active">
             <img class="slideimg" src="./images/slide1.jpg" alt="Slide 1">
-            <p>Texto para el Slide 1</p>
+            <div class="dataslide">
+                <div class="cardslide">
+                    <div class="infoslide">
+                    <h1>Sati Retreats</h1>
+                <p>Healing with Psychedelic Therapy | Sati, Psychedelic Technologies for Healing and Discovery</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="slide">
             <img class="slideimg" src="./images/slide2.jpg" alt="Slide 2">
-            <p>Texto para el Slide 2</p>
+            <div class="dataslide">
+                <div class="cardslide">
+                    <div class="infoslide">
+                    <h1>Sati Retreats</h1>
+                <p>Healing with Psychedelic Therapy | Sati, Psychedelic Technologies for Healing and Discovery</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="slide">
             <img class="slideimg" src="./images/slide3.jpg" alt="Slide 3">
-            <p>Texto para el Slide 3</p>
+            <div class="dataslide">
+                <div class="cardslide">
+                    <div class="infoslide">
+                    <h1>Sati Retreats</h1>
+                <p>Healing with Psychedelic Therapy | Sati, Psychedelic Technologies for Healing and Discovery</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="slider-nav">
             <button class="active"></button>
@@ -175,7 +226,7 @@
         setInterval(() => {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
-        }, 3000);
+        }, 4000);
 
         function getImageIndex() {
             const scrollTop = window.scrollY;
